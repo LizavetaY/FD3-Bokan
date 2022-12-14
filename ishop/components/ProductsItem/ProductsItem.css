@@ -1,0 +1,10 @@
+﻿.TableData {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.TableData .ProductImage {
+  width: 100px;
+  max-height: 100px;
+}
