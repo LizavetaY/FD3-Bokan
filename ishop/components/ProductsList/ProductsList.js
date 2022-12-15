@@ -16,8 +16,8 @@
   },
 
   render: function () {
-    const tableHeaderCode = this.props.headersData.map((header) =>
-      React.DOM.th({ key: header, className: "TableHeader" }, header)
+    const tableHeaderCode = this.props.headersData.map((header, index) =>
+      React.DOM.th({ key: index, className: "TableHeader" }, header)
     );
 
     return React.DOM.div(
