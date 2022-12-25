@@ -22,7 +22,7 @@
     }
   },
 
-  setClassSelected(id) {
+  getClass(id) {
     if (id == this.props.selectedProductId) {
       return "SelectedProduct";
     }
@@ -33,7 +33,7 @@
   render() {
     return React.DOM.tr(
       {
-        className: this.setClassSelected(this.props.productData.productId),
+        className: this.getClass(this.props.productData.productId),
         "data-id": this.props.productData.productId,
         onClick: this.props.selectOnClick,
       },
