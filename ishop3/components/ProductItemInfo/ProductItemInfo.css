@@ -1,0 +1,19 @@
+.ProductInfo {
+  margin-top: 10px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+}
+
+.ProductInfo .ProductInfoText {
+  margin: 0;
+  padding: 0;
+}
+
+.ProductInfo .ProductInfoText:nth-child(n + 2) {
+  margin-top: 10px;
+}
+
+.ProductInfo .ProductInfoPrice {
+  font-weight: 700;
+}
