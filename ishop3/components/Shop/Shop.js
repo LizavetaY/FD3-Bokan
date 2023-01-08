@@ -32,10 +32,15 @@ export class Shop extends React.Component {
     isEditProductBlockOpen: false,
   };
 
-  selectOnClick = (productId) => {
+  selectOnClick = (event, productId) => {
+    if (!event.target.dataset.productid && !this.state.isDisabledEditButton) {
+      this.toggleEditProductBlock(false);
+    }
+
     !this.state.isAddProductBlockOpen &&
+      !this.state.isDisabledEditButton &&
       this.setState({
-        selectedProductId: productId,
+        selectedProductId: event.currentTarget.dataset.id,
       });
   };
 

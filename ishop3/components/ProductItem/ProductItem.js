@@ -20,14 +20,6 @@ export class ProductItem extends React.Component {
     deleteOnClick: PropTypes.func.isRequired,
   };
 
-  selectOnClick = (event) => {
-    if (!event.target.dataset.productid) {
-      this.props.toggleEditBlockOnClick(false);
-    }
-
-    this.props.selectOnClick(event.currentTarget.dataset.id);
-  };
-
   deleteProductOnClick = (event) => {
     event.stopPropagation();
 
@@ -49,7 +41,7 @@ export class ProductItem extends React.Component {
       <tr
         className={this.setClassSelected(this.props.productData.productId)}
         data-id={this.props.productData.productId}
-        onClick={this.selectOnClick}
+        onClick={this.props.selectOnClick}
       >
         <td className="TableData">{this.props.productData.name}</td>
         <td className="TableData">{`$ ${this.props.productData.price}`}</td>
