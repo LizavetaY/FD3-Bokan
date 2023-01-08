@@ -16,8 +16,16 @@ export class ProductItem extends React.Component {
     isDisabledEditButton: PropTypes.bool,
     isDisabledDeleteButton: PropTypes.bool,
     selectOnClick: PropTypes.func.isRequired,
-    openEditBlockOnClick: PropTypes.func.isRequired,
+    toggleEditBlockOnClick: PropTypes.func.isRequired,
     deleteOnClick: PropTypes.func.isRequired,
+  };
+
+  selectOnClick = (event) => {
+    if (!event.target.dataset.productid) {
+      this.props.toggleEditBlockOnClick(false);
+    }
+
+    this.props.selectOnClick(event.currentTarget.dataset.id);
   };
 
   deleteProductOnClick = (event) => {
@@ -41,7 +49,7 @@ export class ProductItem extends React.Component {
       <tr
         className={this.setClassSelected(this.props.productData.productId)}
         data-id={this.props.productData.productId}
-        onClick={this.props.selectOnClick}
+        onClick={this.selectOnClick}
       >
         <td className="TableData">{this.props.productData.name}</td>
         <td className="TableData">{`$ ${this.props.productData.price}`}</td>
@@ -57,7 +65,7 @@ export class ProductItem extends React.Component {
           <button
             data-productid={this.props.productData.productId}
             disabled={this.props.isDisabledEditButton}
-            onClick={this.props.openEditBlockOnClick}
+            onClick={() => this.props.toggleEditBlockOnClick(true)}
           >
             Edit
           </button>
