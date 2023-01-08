@@ -32,33 +32,10 @@ export class Shop extends React.Component {
     isEditProductBlockOpen: false,
   };
 
-  selectOnClick = (event) => {
-    if (
-      this.state.isEditProductBlockOpen &&
-      event.target.nodeName != "BUTTON"
-    ) {
-      this.setState({
-        isDisabledDeleteButton: false,
-        isEditProductBlockOpen: false,
-      });
-    } else if (
-      this.state.isEditProductBlockOpen &&
-      event.target.nodeName == "BUTTON"
-    ) {
-      this.setState(
-        {
-          isEditProductBlockOpen: false,
-        },
-        () =>
-          this.setState({
-            isEditProductBlockOpen: true,
-          })
-      );
-    }
-
+  selectOnClick = (productId) => {
     !this.state.isAddProductBlockOpen &&
       this.setState({
-        selectedProductId: event.currentTarget.dataset.id,
+        selectedProductId: productId,
       });
   };
 
@@ -84,11 +61,19 @@ export class Shop extends React.Component {
     });
   };
 
-  openEditProductBlock = () => {
-    this.setState({
-      isDisabledDeleteButton: true,
-      isEditProductBlockOpen: true,
-    });
+  toggleEditProductBlock = (isOpen) => {
+    this.setState(
+      {
+        isDisabledDeleteButton: false,
+        isEditProductBlockOpen: false,
+      },
+      () => {
+        this.setState({
+          isDisabledDeleteButton: isOpen,
+          isEditProductBlockOpen: isOpen,
+        });
+      }
+    );
   };
 
   transformProductsList = (deletedProductId) => {
@@ -170,7 +155,7 @@ export class Shop extends React.Component {
         isDisabledEditButton={this.state.isDisabledEditButton}
         isDisabledDeleteButton={this.state.isDisabledDeleteButton}
         selectOnClick={this.selectOnClick}
-        openEditBlockOnClick={this.openEditProductBlock}
+        toggleEditBlockOnClick={this.toggleEditProductBlock}
         deleteOnClick={this.deleteOnClick}
       />
     ));
