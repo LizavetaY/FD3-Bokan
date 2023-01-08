@@ -1,0 +1,25 @@
+﻿.Shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Shop .Header {
+  font-size: 24px;
+  color: midnightblue;
+}
+
+.Shop .Table {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px #ccc;
+  overflow: hidden;
+}
+
+.Shop .Table .TableHeader {
+  padding: 5px 10px;
+  border: 1px solid #000;
+  background-color: lightblue;
+}

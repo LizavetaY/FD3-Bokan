@@ -1,0 +1,45 @@
+.EditProductBlock .EditProductText {
+  margin: 0;
+  padding: 0;
+}
+
+.EditProductBlock .Form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px 0;
+  width: 300px;
+}
+
+.EditProductBlock .Form .FormLabel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.EditProductBlock .Form .FormLabel:nth-child(n + 2) {
+  margin-top: 5px;
+}
+
+.EditProductBlock .Form .FormInput {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.EditProductBlock .Form .FormError {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translate(100%, -50%);
+  color: red;
+}
+
+.EditProductBlock .Form .FormButtons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  min-width: 50%;
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "productId": "pr1",
+    "name": "Water",
+    "price": 2,
+    "photoUrl": "https://www.bigbasket.com/media/uploads/p/l/265894_7-aquafina-packaged-drinking-water.jpg",
+    "quantity": 20
+  },
+  {
+    "productId": "pr2",
+    "name": "Bread",
+    "price": 4,
+    "photoUrl": "https://www.thespruceeats.com/thmb/vbc6MqkqHlkSOx_X5Clyo5qv0kk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/loaf-of-bread-182835505-58a7008c5f9b58a3c91c9a14.jpg",
+    "quantity": 15
+  },
+  {
+    "productId": "pr3",
+    "name": "Milk",
+    "price": 8,
+    "photoUrl": "https://mlekpol.com.pl/wp-content/uploads/2018/08/Laciate_1L_3.2.jpg",
+    "quantity": 3
+  },
+  {
+    "productId": "pr4",
+    "name": "Honey",
+    "price": 20,
+    "photoUrl": "https://img.freepik.com/premium-photo/glass-jar-pure-honey-with-honey-dipper-isolated-white-background_252965-49.jpg?w=2000",
+    "quantity": 4
+  },
+  {
+    "productId": "pr5",
+    "name": "Cake",
+    "price": 10,
+    "photoUrl": "https://thumbs.dreamstime.com/b/fruit-chocolate-birthday-cake-white-background-fruit-chocolate-birthday-cake-white-background-113735538.jpg",
+    "quantity": 2
+  }
+]
