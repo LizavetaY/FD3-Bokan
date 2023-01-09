@@ -1,0 +1,12 @@
+.Container {
+  display: flex;
+  justify-content: center;
+}
+
+.Container .Br2jsx {
+  padding: 20px;
+  width: 100px;
+  background-color: darkslategrey;
+  color: #fff;
+  text-align: center;
+}
