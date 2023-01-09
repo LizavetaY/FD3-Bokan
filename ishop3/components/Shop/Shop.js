@@ -67,18 +67,10 @@ export class Shop extends React.Component {
   };
 
   toggleEditProductBlock = (isOpen) => {
-    this.setState(
-      {
-        isDisabledDeleteButton: false,
-        isEditProductBlockOpen: false,
-      },
-      () => {
-        this.setState({
-          isDisabledDeleteButton: isOpen,
-          isEditProductBlockOpen: isOpen,
-        });
-      }
-    );
+    this.setState({
+      isDisabledDeleteButton: isOpen,
+      isEditProductBlockOpen: isOpen,
+    });
   };
 
   transformProductsList = (deletedProductId) => {
@@ -198,6 +190,7 @@ export class Shop extends React.Component {
 
         {this.state.isEditProductBlockOpen && (
           <EditProductBlock
+            key={this.state.selectedProductId}
             productData={this.getProductData()}
             toggleEditButtonOnDirty={this.toggleEditButtonOnDirty}
             editOnClick={this.editOnClick}
