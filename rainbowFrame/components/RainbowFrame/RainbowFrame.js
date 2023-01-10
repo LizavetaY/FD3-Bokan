@@ -13,20 +13,16 @@ export class RainbowFrame extends React.Component {
   };
 
   render() {
-    return (
-      <>
-        {this.props.colors.reduce((code, color, index) => {
-          return (
-            <div
-              key={index}
-              className="RainbowFrame"
-              style={{ border: `10px solid ${color}` }}
-            >
-              {code}
-            </div>
-          );
-        }, <h1>{this.props.children}</h1>)}
-      </>
-    );
+    return this.props.colors.reduce((code, color, index) => {
+      return (
+        <div
+          key={index}
+          className="RainbowFrame"
+          style={{ border: `10px solid ${color}` }}
+        >
+          {code}
+        </div>
+      );
+    }, <h1>{this.props.children}</h1>);
   }
 }
